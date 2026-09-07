@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XR Teardown - syncAR Spine Next Generation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #introduction.context {
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  #tech-breakdown.breakdown-heading {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+  }
+</style>
+</head>
+<body data-theme="light">
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<aside class="section-rail" aria-label="Page navigation">
+  <div class="rail-topline">
+    <span class="rail-progress" id="railProgress">01 / 04</span>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Enable dark theme" aria-pressed="true">
+      <span class="theme-icon" aria-hidden="true">☾</span>
+    </button>
+  </div>
+  <nav class="rail-nav">
+    <a class="rail-link is-active" href="#get-started" data-section="get-started"><span class="rail-dot"></span><span>Get started</span></a>
+    <a class="rail-link" href="#introduction" data-section="introduction"><span class="rail-dot"></span><span>Introduction</span></a>
+    <a class="rail-link" href="#tech-breakdown" data-section="tech-breakdown"><span class="rail-dot"></span><span>Tech breakdown</span></a>
+    <a class="rail-link" href="#conclusion" data-section="conclusion"><span class="rail-dot"></span><span>Conclusion</span></a>
+  </nav>
+</aside>
+
+<header class="hero rail-section" id="get-started" data-section="get-started">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-label="SyncAR Spine surgical visualization video">
+    <source src="assets/video/SyncAR-Spine-Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-copy">
+  <p class="eyebrow">Assignment 01 <span>/</span> XR teardown</p>
+  <h1 class="hero-title">syncAR Spine Next Generation</h1>
+  <p class="hero-meta">A 2025 release XR technology innovation of the medical world. AI-driven immersive surgical visualization for spine surgery, built on an orthopedic approach.</p>
+  <a class="scroll-cta" href="#introduction"><span>Let's Begin</span><span aria-hidden="true">↘</span></a>
+  </div>
+</header>
+
+<section class="context rail-section" id="introduction" data-section="introduction">
+  <div class="context-inner">
+    <p class="section-label">02 <span>Introduction</span></p>
+    <h2>Why this innovation matters</h2>
+    <p>This innovation is one of the most impactful applications of XR in the medical and healthcare world. With XR integrated into medicine — in this case, orthopedics — doctors gain an easier path to decision-making, surgical preparation, and real-time, immersive patient monitoring. This carries a significant impact, as it can reduce surgical risk, minimize hesitation and error, and improve surgical precision.</p>
+    <p class="stat-line">
+      <span class="counter" data-target="50000">0</span>
+      <span class="stat-label">Total clinical procedures performed across Surgical Theater's entire XR product line. Surgical Theater has been a pioneer trusted by surgeons in the field of applied XR in the medical industry.</span>
+    </p>
+  </div>
+</section>
+
+<div class="breakdown-heading rail-section" id="tech-breakdown" data-section="tech-breakdown">
+  <p class="section-label">03 <span>Tech breakdown</span></p>
+  <h2>Four layers that shape the experience.</h2>
+</div>
+
+<div class="scrolly">
+  <div class="scrolly-visual">
+    <div class="visual-stage" id="visualStage" data-active-step="1">
+
+      <img class="step-visual is-active" data-step-visual="1" src="assets/images/Device%20Class.png" alt="Device class visualization">
+
+      <img class="step-visual" data-step-visual="2" src="assets/images/Input%20modality.png" alt="Input modality visualization">
+
+      <img class="step-visual" data-step-visual="3" src="assets/images/AI.png" alt="Artificial intelligence visualization">
+
+      <img class="step-visual" data-step-visual="4" src="assets/images/Impact.png" alt="Impact visualization">
+
+    </div>
+  </div>
+
+  <div class="scrolly-steps">
+
+    <section class="step" data-step="1">
+      <span class="step-number">01</span>
+      <h3>Device class</h3>
+      <p class="step-data" style="text-align: justify;">syncAR Spine is an XR software platform that combines Virtual Reality and Augmented Reality technologies. This combined technology is used across different stages of the surgical process, allowing surgeons to have immersive and interactive surgical planning and guidance.</p>
+      <p class="step-opinion"><strong>My take:</strong> This device combines VR and AR in one platform, each used for a different purpose. Virtual Reality is used during the preoperative process, where surgeons plan and map the patient's entire spine structure, giving them a full scope of review and observation beforehand. The Augmented Reality side is used once the actual surgery begins: the surgeon wears the AR headset, and SyncAR shows them the previously prepared spine surgery plan. It combines the purposes of both XR classes in an efficient and elegant way, giving surgeons more options and greater control during surgery.</p>
+    </section>
+
+    <section class="step" data-step="2">
+      <span class="step-number">02</span>
+      <h3>Input modality</h3>
+      <p class="step-data" style="text-align: justify;">A VR headset lets the surgeon interact with the preoperative plan immersively, viewing the 3D spine model stereoscopically while placing guidance objects such as directional markers and virtual screws. During surgery, the surgeon wears an AR headset — most commonly a Microsoft HoloLens 2, with earlier versions of the platform also supporting Magic Leap 1 — which functions purely as a heads-up display, projecting the live 3D model, navigation tracker, and guidance cues into the surgeon's field of view without requiring any direct manual interaction.</p>
+      <p class="step-opinion"><strong>My take:</strong> The input modalities for each XR type are distinct and serve specific purposes. The VR headset allows for immersive interaction with the preoperative plan, while the AR headset provides a hands-free, heads-up display during surgery which allows the surgeons to focus on the surgery and follow the guidance that has been projected.</p>
+    </section>
+
+    <section class="step" data-step="3">
+      <span class="step-number">03</span>
+      <h3>Artificial intelligence</h3>
+      <p class="step-data" style="text-align: justify;">The next-generation platform adds AI-driven vertebra segmentation, Advanced Decompression Planning (ADP) to pre-map bone resections, and Segmental Fusion, which keeps 3D models aligned with intraoperative CT even as the patient's position changes.</p>
+      <p class="step-opinion"><strong>My take:</strong> The use of AI within the SyncAR Spine Next Generation platform is a mature and genuinely purpose-fit application of AI. Most AI in today's platforms is just an extra marketing gimmick. In SyncAR Spine's case, the AI model truly functions as a surgical assistant that simplifies the spine surgery procedure — from the initial vertebra segmentation process to the tracking and memory method that helps the surgeon keep track of which parts have already been processed, allowing the operation to proceed sequentially while reducing the risk of unnecessary, repeated processing.</p>
+    </section>
+
+    <section class="step" data-step="4">
+      <span class="step-number">04</span>
+      <h3>Impact</h3>
+      <p class="step-data" style="text-align: justify;">The integration of XR in medical applications like syncAR Spine Next Generation shows great potential for improving accuracy and efficiency in surgical procedures. With the ability to map anatomical structures in real time and provide accurate guidance, this technology can help surgeons make better decisions and reduce the risk of complications during surgery.</p>
+    </section>
+
+  </div>
+</div>
+
+<section class="climax rail-section" id="conclusion" data-section="conclusion">
+  <div class="climax-inner">
+    <p class="section-label">04 <span>Conclusion</span></p>
+    <h2>XR's benefits are not limited to entertainment and industry, but also extend to health and medicine.</h2>
+    <p>syncAR Spine Next Generation is genuine proof that XR technology is transforming medicine to be more precise and effective. With AI-based segmentation and real-time model re-alignment, it sets a new standard for precision in spine surgery. Beyond that, this application could also become a frontier for more educational, immersive medical training and patient education.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Sources &amp; references:</p>
+  <ul>
+    <li>FDA 510(k) Summary K252054 - SpineAR SNAP (SyncAR Spine), Product Code SBF "Orthopedic Augmented Reality", accessdata.fda.gov/cdrh_docs/pdf25/K252054.pdf</li>
+    <li>FDA 510(k) Summary K243623 - SpineAR SNAP (SyncAR Spine), accessdata.fda.gov/cdrh_docs/pdf24/K243623.pdf</li>
+    <li>Hoag Hospital - "First SyncAR for Spine Surgery in the World Performed at Hoag" (Dec 7, 2022), hoag.org</li>
+    <li>PR Newswire - "Next-Generation AI-Driven SyncAR® Spine Receives FDA Clearance for Spine Surgery" (Oct 10, 2025)</li>
+    <li>ODT Magazine - "FDA OKs Surgical Theater's Next-Gen, AI-Driven SyncAR Spine" (Oct 10, 2025)</li>
+    <li>Medical Device Network - "FDA grants 510(k) clearance to Surgical Theater's spine platform" (Oct 13, 2025)</li>
+    <li>The Spine Market Group - "Seven Leading AR and XR Systems in Spine Surgery" (Jan 2026)</li>
+  </ul>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
