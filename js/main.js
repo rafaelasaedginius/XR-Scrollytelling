@@ -55,6 +55,7 @@ function initSectionRail() {
 function initStepObserver() {
   const steps = document.querySelectorAll('.step');
   const stepVisuals = document.querySelectorAll('.step-visual');
+  const isMobile = window.matchMedia('(max-width: 860px)').matches;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -70,7 +71,10 @@ function initStepObserver() {
         });
       }
     });
-  }, { threshold: 0.5 });
+  }, {
+    threshold: isMobile ? 0.2 : 0.5,
+    rootMargin: isMobile ? '-15% 0px -45% 0px' : '0px'
+  });
 
   steps.forEach((step) => observer.observe(step));
 }

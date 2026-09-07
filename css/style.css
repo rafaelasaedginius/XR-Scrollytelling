@@ -27,6 +27,11 @@ body[data-theme="light"] {
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -403,11 +408,19 @@ h1, h2, h3 {
   .hero-copy { max-width: 100%; }
   .breakdown-heading { padding-top: 5rem; }
   .scrolly {
-    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .scrolly-visual {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 50vh;
+    background: var(--bg);
   }
 
   .visual-stage {
-    position: static;
+    position: relative;
     height: 50vh;
   }
 
@@ -421,5 +434,59 @@ h1, h2, h3 {
     min-height: auto;
     padding: 3rem 1.5rem;
     opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 78vh;
+    padding: 5rem 1.25rem 2.5rem;
+  }
+
+  .hero-video {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .hero-meta {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .context {
+    padding: 5rem 1.25rem;
+  }
+
+  .stat-line {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .counter {
+    font-size: 2.5rem;
+  }
+
+  .breakdown-heading {
+    padding: 4rem 1.25rem 2rem;
+  }
+
+  .visual-stage {
+    height: 42vh;
+    padding: 1rem;
+  }
+
+  .scrolly-visual {
+    height: 42vh;
+  }
+
+  .step {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .climax {
+    padding: 5rem 1.25rem;
   }
 }
